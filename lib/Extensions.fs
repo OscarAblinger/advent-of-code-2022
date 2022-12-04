@@ -84,3 +84,9 @@ module MultiMap =
                     |> Option.bind (fun s -> if s.IsEmpty then None else Some s)
                 ) acc
             ) m1 m2
+
+module Option =
+    let orElseFail (errMsg: string) (option: Option<'a>): 'a =
+        match option with
+        | Some v -> v
+        | None -> failwith errMsg
