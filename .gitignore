@@ -1,0 +1,31 @@
+# custom
+
+.vs/
+
+# Created by https://www.toptal.com/developers/gitignore/api/fsharp,vscode
+# Edit at https://www.toptal.com/developers/gitignore?templates=fsharp,vscode
+
+### fsharp ###
+lib/debug
+lib/release
+Debug
+*.suo
+*.user
+obj
+bin
+/build/
+*.exe
+!.paket/paket.bootstrapper.exe
+.ionide/
+
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# End of https://www.toptal.com/developers/gitignore/api/fsharp,vscode
+
+.fake
