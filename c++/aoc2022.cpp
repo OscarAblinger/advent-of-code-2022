@@ -3,8 +3,10 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
+
 #include "aoc2022.h"
 #include "days/01.h"
+#include "days/02.h"
 
 using std::cin;
 using std::cout;
@@ -117,7 +119,8 @@ int main(int argc, char* argv[])
   auto [day, part, inputSrc] = get_parameters(argc, argv);
 
   AOCFunction days[] = {
-	aoc::day01::run
+	aoc::day01::run,
+	aoc::day02::run,
   };
 
   vector<string> input;
