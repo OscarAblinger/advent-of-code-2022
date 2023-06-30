@@ -1,10 +1,28 @@
 ﻿module Extensions
 
+open System.Text.RegularExpressions
+
 let (|LargerThan|Equal|LessThan|) (a, b) =
     match compare a b with
     | 0 -> Equal
     | x when x > 0 -> LargerThan
     | _ -> LessThan
+
+let (|StrPrefix|_|) (prefix: string) (full: string) =
+    if full.StartsWith prefix then
+        Some(full.Substring(prefix.Length))
+    else
+        None
+
+let (|Regex|_|) (pattern: string) (input: string) =
+    if input = null then
+        None
+    else
+        let m = Regex.Match(input, pattern, RegexOptions.Compiled)
+        if m.Success then
+            Some [for x in m.Groups -> x]
+        else
+            None
 
 module List =
     let countInt64 (list: 'a list): Map<'a, int64> =
