@@ -64,7 +64,7 @@ namespace aoc {
 		| common;
 
 	  int score = accumulate(charValues.begin(), charValues.end(), 0);
-	  
+
 	  return to_string(score);
 	}
 

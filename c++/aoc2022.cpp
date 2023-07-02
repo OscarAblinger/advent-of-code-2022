@@ -8,6 +8,7 @@
 #include "days/01.h"
 #include "days/02.h"
 #include "days/03.h"
+#include "days/05.h"
 
 using std::cin;
 using std::cout;
@@ -123,6 +124,8 @@ int main(int argc, char* argv[])
 	aoc::day01::run,
 	aoc::day02::run,
 	aoc::day03::run,
+	[](auto part, auto input) -> string { printf("day 4 not implemented"); exit(1); },
+	aoc::day05::run,
   };
 
   vector<string> input;
